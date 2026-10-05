@@ -2,8 +2,8 @@
   "schema": 1,
   "courseId": 2074,
   "repository": "LearningOS/2026a-oscamp-base-peroxygenhao",
-  "commit": "aa5f3fd7c86da7e15bf7ee1f981eeb9e2505af63",
-  "score": 94,
+  "commit": "cc5440fbd50fc8864fc463fec7c780a8b8b73fad",
+  "score": 100,
   "totalScore": 100,
   "exercises": [
     {
@@ -114,9 +114,9 @@
     {
       "name": "green_threads",
       "max": 6,
-      "score": 0,
-      "status": "fail",
-      "exitCode": 101
+      "score": 6,
+      "status": "pass",
+      "exitCode": 0
     },
     {
       "name": "basic_future",
@@ -176,9 +176,9 @@
     }
   ],
   "student": "peroxygenhao",
-  "runId": "37311578037",
+  "runId": "37326928303",
   "runAttempt": "1",
   "upload": {
-    "status": "accepted"
+    "status": "pending"
   }
 }
