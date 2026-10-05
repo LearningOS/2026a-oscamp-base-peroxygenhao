@@ -191,7 +191,11 @@ impl Scheduler {
         }
         self.current = next;
         unsafe {
-            switch_context(&mut self.threads[old].ctx, &self.threads[next].ctx);
+            // The contexts live in distinct vector elements; raw pointers avoid holding
+            // overlapping borrows across the context switch, which never returns normally.
+            let old_ctx = self.threads[old].ctx.as_mut_ptr();
+            let next_ctx = self.threads[next].ctx.as_ptr();
+            switch_context(&mut *old_ctx, &*next_ctx);
         }
     }
 }
